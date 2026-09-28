@@ -1,0 +1,17 @@
+# Core (tested with Python 3.11 / 3.12)
+agent-framework-core==1.19.0
+agent-framework-openai==1.14.4
+mcp==1.27.0
+openai==3.20.0
+fastapi==0.141.1
+uvicorn==0.46.0
+httpx==0.28.1
+pydantic==2.13.3
+PyJWT==2.12.1
+PyYAML==6.0.3
+python-dotenv==1.2.2
+opentelemetry-sdk==1.45.0
+opentelemetry-exporter-otlp==1.45.0
+# tests
+pytest==9.1.1
+pytest-asyncio==1.4.0

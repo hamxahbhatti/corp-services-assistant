@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corporate Services Assistant — demo</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <div class="logo">CS</div>
+    <div>
+      <div class="title">Corporate Services Assistant</div>
+      <div class="sub">HR · Finance · Procurement · IT — prototype of the critical path</div>
+    </div>
+  </div>
+  <div class="controls">
+    <label>Signed in as
+      <select id="persona"></select>
+    </label>
+    <span id="groups" class="groups"></span>
+    <span id="model" class="model"></span>
+  </div>
+</header>
+
+<main class="layout">
+  <section class="chat">
+    <div id="messages" class="messages"></div>
+    <div class="samples" id="samples"></div>
+    <form id="composer" class="composer">
+      <textarea id="input" dir="auto" rows="2" placeholder="Ask about a policy, an invoice, a purchase request or a ticket…  اسأل بالعربية أو الإنجليزية"></textarea>
+      <button type="submit" id="send">Send</button>
+    </form>
+  </section>
+
+  <aside class="inspector">
+    <nav class="tabs">
+      <button data-tab="evidence" class="active">Evidence</button>
+      <button data-tab="trace">Trace</button>
+      <button data-tab="audit">Audit</button>
+    </nav>
+    <div id="tab-evidence" class="tab active"><p class="muted">Ask something to see sources, system facts and retrieval details.</p></div>
+    <div id="tab-trace" class="tab"><p class="muted">OpenTelemetry spans for the last turn appear here.</p></div>
+    <div id="tab-audit" class="tab"><p class="muted">Tool-server authorisation decisions, approvals and the outbox.</p></div>
+  </aside>
+</main>
+<script src="/static/app.js"></script>
+</body>
+</html>

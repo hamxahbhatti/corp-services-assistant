@@ -1,0 +1,3 @@
+# Optional: only for SEARCH_BACKEND=azure and Application Insights export (adapters included, untested)
+azure-search-documents>=11.6
+azure-monitor-opentelemetry-exporter>=1.0.0b40

@@ -1,0 +1,4 @@
+# Local chat model with a larger context window (Ollama's OpenAI endpoint cannot set num_ctx per request)
+FROM qwen2.5:7b
+PARAMETER num_ctx 8192
+PARAMETER temperature 0
