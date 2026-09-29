@@ -65,7 +65,7 @@ flowchart LR
 
 ```bash
 brew install python@3.12 ollama        # if not installed
-./scripts/setup_mac.sh                  # venv, deps, pulls qwen2.5:7b + bge-m3 (~6 GB), builds the index
+./scripts/setup_mac.sh                  # venv, deps, reuses qwen2.5 if installed, pulls bge-m3 if missing, builds the index, runs checks
 ./scripts/start.sh                      # MCP tool server + web app  →  http://localhost:8000
 ```
 
@@ -81,6 +81,7 @@ Use the sample buttons under the chat, or type your own question. Switch persona
 Other commands:
 
 ```bash
+make doctor          # checks Ollama, the models, JSON structured output and Arabic↔English embeddings
 make eval-quick      # 8 golden questions + all security tests (~3-4 min locally)
 make eval            # full evaluation → evals/reports/eval_report.md
 make test            # pytest suite (uses the scripted test double; no model needed)
